@@ -107,6 +107,22 @@
             "imagen": "tienda-articulos.png",
             "icono": "tienda-articulos.png",
             "repositorio": "https://github.com/Ginto11/Tienda_Articulos"
+        },
+        {
+            "id": 12,
+            "nombre": "Slider de Imagenes",
+            "link": "https://slider-umber.vercel.app/",
+            "imagen": "slider.png",
+            "icono": "slider.png",
+            "repositorio": "https://github.com/Ginto11/Slider"
+        },
+        {
+            "id": 13,
+            "nombre": "Objeto Persona",
+            "link": "https://objeto-persona.vercel.app/",
+            "imagen": "poo.png",
+            "icono": "poo.png",
+            "repositorio": "https://github.com/Ginto11/Objeto-Persona"
         }
     ]
 }
