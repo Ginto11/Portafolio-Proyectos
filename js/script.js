@@ -200,7 +200,9 @@ function crearSection(elemento){
     section.style.display = "flex";
     section.style.flexDirection = "column";
     section.style.alignItems = "center";
+    section.style.overflowY = "scroll"
     section.style.justifyContent = "center";
+    section.style.position = "relative";
     section.style.width = "70%";
     section.style.height = "calc(100vh - 80px)";
     elemento.appendChild(section);
@@ -282,7 +284,18 @@ function agregarElementosProyecto(proyecto){
     contenedorBotones.appendChild(btnVerRepositorio);
     $body.querySelector(".section").appendChild(contenedorImagen);
     $body.querySelector(".section").appendChild(contenedorBotones);
-    
+    $body.querySelector(".section").appendChild(crearFooter());
+}
+
+function crearFooter(){
+    const footer = document.createElement("div");
+    footer.style.width = "100%";
+    footer.style.height = "300px";
+    footer.style.position = "absolute"
+    footer.style.background = "red";
+    footer.style.bottom = "-300px";
+
+    return footer;
 }
 
 function removerSection(){
