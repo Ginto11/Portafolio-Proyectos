@@ -15,9 +15,23 @@ document.addEventListener("DOMContentLoaded", ()=> {
 
 document.addEventListener("click", e =>{
     if(e.target.matches(".link")){
-        removerSection();
-        crearSection($body.querySelector(".contenedor"))
-        mapearProyecto(e.target.dataset.id, null)
+
+        if(e.target.dataset.id == 7){
+            let contrasena = 1001944317;
+            let input = parseInt(prompt("Introduce la contraseña"));
+
+            if(contrasena === input){
+                removerSection();
+                crearSection($body.querySelector(".contenedor"))
+                mapearProyecto(e.target.dataset.id, null)
+            }
+        } else {
+            removerSection();
+            crearSection($body.querySelector(".contenedor"))
+            mapearProyecto(e.target.dataset.id, null)
+
+        }
+
     }
 
 
