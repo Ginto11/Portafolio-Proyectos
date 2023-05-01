@@ -1,0 +1,112 @@
+{
+    "redes":[
+        {
+            "icon": "icon-facebook2",
+            "link": "https://www.facebook.com/groups/1339948533119446"
+        }, 
+        {
+            "icon": "icon-tiktok",
+            "link": "https://www.tiktok.com/@nelsonmunoz11"
+        }, 
+        {
+            "icon": "icon-youtube1",
+            "link":"https://www.youtube.com/@gustoporlaprogramacion"
+        }, 
+        {
+            "icon": "icon-instagram1",
+            "link": "https://www.instagram.com/nelsonmunoz.11"
+        }
+    ],
+
+    "proyectos": [
+        {
+            "id": 1,
+            "nombre": "Rick y Morty App", 
+            "link": "http://rick-y-morty-app-sage.vercel.app/",
+            "imagen": "rick-y-morty-app.png",
+            "icono": "rick-y-morty-app.png",
+            "repositorio": "https://github.com/Ginto11/Rick-Y-Morty-APP"
+        },
+        {
+            "id": 2,
+            "nombre": "Sistema IMC",
+            "link": "http://imc-ginto11.vercel.app/",
+            "imagen": "imc.png",
+            "icono": "imc.png",
+            "repositorio": "https://github.com/Ginto11/IMC"
+        },
+        {
+            "id": 3,
+            "nombre": "Colors",
+            "link": "https://colors-indol.vercel.app/",
+            "imagen": "colors.png",
+            "icono": "colors.png",
+            "repositorio": "https://github.com/Ginto11/Colors"
+        },
+        {
+            "id": 4,
+            "nombre": "Proyecto Tienda",
+            "link": "https://proyecto-tienda-nine.vercel.app/",
+            "imagen": "proyecto-tienda.png",
+            "icono": "proyecto-tienda.png",
+            "repositorio": "https://github.com/Ginto11/Proyecto-Tienda"
+    
+        },
+        {
+            "id": 5,
+            "nombre": "Shop",
+            "link": "http://shop-ginto11.vercel.app/",
+            "imagen": "shop.png",
+            "icono": "shop.png",
+            "repositorio": "https://github.com/Ginto11/Shop"
+        },
+        {
+            "id": 6,
+            "nombre": "Sitio Web Ajax",
+            "link": "http://sitio-web-ajax.vercel.app/", 
+            "imagen": "sitio-web-ajax.png",
+            "icono": "sitio-web-ajax.png",
+            "repositorio": "https://github.com/Ginto11/SitioWeb_AJAX"
+        },
+        {
+            "id": 7,
+            "nombre": "Aniversario",
+            "link": "https://aniversario-hazel.vercel.app/",
+            "imagen": "aniversario.png",
+            "icono": "aniversario.png",
+            "repositorio": "https://github.com/Ginto11/Aniversario"
+        },
+        {
+            "id": 8,
+            "nombre": "Tienda Elementos",
+            "link": "https://tienda-git-master-ginto11.vercel.app/",
+            "imagen": "tienda.png",
+            "icono": "tienda.png",
+            "repositorio": "https://github.com/Ginto11/Tienda"
+        },
+        {
+            "id": 9,
+            "nombre": "Sistema Profesores",
+            "link": "https://sistema-profesores.vercel.app/",
+            "imagen": "sistema-profesores.png",
+            "icono": "sistema-profesores.png",
+            "repositorio": "https://github.com/Ginto11/Sistema-Profesores"
+        },
+        {
+            "id": 10,
+            "nombre": "Sitio Flex",
+            "link": "https://sitio-flexbox.vercel.app/",
+            "imagen": "sitio-flex.png",
+            "icono": "sitio-flex.png",
+            "repositorio": "https://github.com/Ginto11/Sitio_Flexbox"
+        },
+        {
+            "id": 11,
+            "nombre": "Tienda Articulos",
+            "link": "https://tienda-articulos.vercel.app/index.html",
+            "imagen": "tienda-articulos.png",
+            "icono": "tienda-articulos.png",
+            "repositorio": "https://github.com/Ginto11/Tienda_Articulos"
+        }
+    ]
+}

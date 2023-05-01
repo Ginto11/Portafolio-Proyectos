@@ -1,0 +1,35 @@
+* {
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+body{
+    background-color: #000117;
+}
+
+.contenedor-links::-webkit-scrollbar{
+    width: 7px;
+    background-color: #fff4;
+    border-radius: 4px;
+}
+.contenedor-links::-webkit-scrollbar-thumb{
+    width: 7px;
+    background-color: #0370B7;
+    border-radius: 4px;
+}
+
+.link{
+    color: #DADAD9;
+}
+
+.link:hover {
+    background-color: #0006;
+    color: #0370B7;
+    border-color: #0370B7;
+}
+
+.btn:hover{
+    background-color: #AE445A;
+}
