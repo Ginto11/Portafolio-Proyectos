@@ -41,17 +41,28 @@ document.addEventListener("mouseover", e => {
     if(e.target.matches(".btn")){
         e.target.style.background = "#CD4450";
     }
+
+    if(e.target.matches(".red-social")){
+        e.target.style.filter = "drop-shadow(0 0 1px #0370B7)";
+    }
 })
 
 document.addEventListener("mouseout", e =>{
     if(e.target.matches(".btn")){
         e.target.style.background = "#B51A2B";
     }
-})
+
+    if(e.target.matches(".red-social")){
+        e.target.style.filter = "none";
+    }
+});
+
 
 function crearHeader(elemento){
     const header = document.createElement("header");
     const h1 = document.createElement("h1");
+    const contenedorLinks = document.createElement("div");
+
 
     header.style.height = "80px";
     header.style.width = "100%";
@@ -61,7 +72,7 @@ function crearHeader(elemento){
     header.style.background = "#0370B7";
 
     h1.style.color = "#000117";
-    h1.textContent = "Portafolio de Proyectos";
+    h1.textContent = "Portafolio";
     h1.style.textAlign = "center";
 
     header.appendChild(h1)
@@ -168,6 +179,7 @@ function contenerAsideRedes(elemento){
                 const {icon, link} = red;
                 const a = document.createElement("a");
                 a.classList.add(icon);
+                a.classList.add("red-social");
                 a.href = link;
                 a.style.color = "#DADAD9";
                 a.style.fontSize = "30px";
@@ -279,3 +291,22 @@ function removerSection(){
 
     elementoPadre.removeChild(section);
 }
+
+
+/** RESPOSIVE DESIGN */
+const mql = window.matchMedia("(max-width: 320px)");
+/*function aplicarMediaQuery(mql){
+    console.log(mql)
+    if(mql.matches){
+        document.querySelector("aside").style.width = "100%"
+        document.querySelector("aside").style.position = "absolute";
+        document.querySelector("aside").style.top = "0";
+        document.querySelector("aside").style.bottom = "0"
+        document.querySelector(".contenedor").style.flexDirection = "column";
+        document.querySelector(".contenedor").style.gap = "30px"
+    }else {
+        document.querySelector(".contenedor").style.flexDirection = "row"
+        document.querySelector("aside").style.width = "30%";
+        document.querySelector("aside").style.position = "none";
+    }
+}*/

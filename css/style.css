@@ -24,10 +24,16 @@ body{
     color: #DADAD9;
 }
 
-.link:hover {
+.link:hover{
     background-color: #0006;
     color: #0370B7;
     border-color: #0370B7;
+    text-indent: 30px;
+}
+
+.link:hover img{
+    transition: .3s ease all;
+    transform: translateX(30px);
 }
 
 .btn:hover{
