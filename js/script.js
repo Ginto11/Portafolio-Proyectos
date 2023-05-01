@@ -289,11 +289,44 @@ function agregarElementosProyecto(proyecto){
 
 function crearFooter(){
     const footer = document.createElement("div");
+    const div = document.createElement("div");
+
+    div.style.width = "100%";
+    div.style.height = "350px";
+    div.style.background = "#0006";
+    div.style.bottom = "-350px";
+    div.style.display = "flex";
+    div.style.flexDirection = "column";
+    div.style.alignItems = "center";
+    div.style.justifyContent = "flex-start";
+    div.style.color = "#DADAD9";
+
+    div.innerHTML = `
+        <h2 style="margin-top: 30px; margin-bottom: 30px;"> Contacto </h2>
+        <div style="display: flex; gap: 30px; justify-content: center; align-items: center;">
+            <div style="width: 300px;"> 
+                <img style="width: 100%; border-radius: 10px;" src="./img/footer/foto.jpg" alt="Foto" />
+            </div>
+            <div>
+                <ul style="display: flex; flex-direction: column; gap: 10px;">
+                    <li> <strong> Desarrollador: </strong> Nelson Muñoz </li>
+                    <li> <strong> Edad: </strong> 21 años </li>
+                    <li> <strong> Cargo o Profesión: </strong> Desarrollador Junior </li>
+                    <li> <strong> Pais: </strong> Colombia </li>
+                    <li> <strong> Ciudad: </strong> Bogota D.C </li>
+                    <li> <strong> Fecha creación: </strong> 1/05/2023 </li>
+                </ul>
+            </div>
+        </div>
+    `
+
     footer.style.width = "100%";
-    footer.style.height = "300px";
+    footer.style.height = "350px";
     footer.style.position = "absolute"
-    footer.style.background = "red";
-    footer.style.bottom = "-300px";
+    footer.style.background = "#34495E60";
+    footer.style.bottom = "-350px";
+
+    footer.appendChild(div);
 
     return footer;
 }
