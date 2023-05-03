@@ -22,6 +22,33 @@
         }
     ],
 
+    "datosFooter": [
+        {
+            "titulo": "Desarollador",
+            "valor": "Nelson Muñoz"
+        },
+        {
+            "titulo": "Edad",
+            "valor": 21
+        },
+        {
+            "titulo": "Cargo o Profesión",
+            "valor": "Desarrollador Junior"
+        },
+        {
+            "titulo": "Pais",
+            "valor": "Colombia"
+        },
+        {
+            "titulo": "Ciudad",
+            "valor": "Bogotá D.C"
+        },
+        {
+            "titulo": "Fecha creación",
+            "valor": "01/05/2023"
+        }
+    ],
+
     "proyectos": [
         {
             "id": 1,

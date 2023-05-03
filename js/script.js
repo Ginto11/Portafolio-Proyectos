@@ -1,7 +1,7 @@
 const $body = document.body;
 
 document.addEventListener("DOMContentLoaded", ()=> {
-
+    $body.setAttribute("data-theme", "noche");
     crearHeader($body);
     crearContenedor($body);
     crearAside($body.querySelector(".contenedor"));
@@ -34,6 +34,25 @@ document.addEventListener("click", e =>{
 
     }
 
+    if(e.target.matches(".btn-theme")){
+        //const elementos = document.querySelectorAll("[data-theme]");
+        /*elementos.forEach(el => {
+            el.style.background = "#DADAD9";
+            el.style.color = "#000";
+        })
+        console.log(elementos)*/
+
+        document.querySelector("body").style.background = "#f2f2f2";
+        document.querySelector("aside").style.background = "#fff";
+        document.querySelector("aside").style.boxShadow = "0 0 3px #000";
+        document.querySelector("aside .titulo").style.background = "#292F36";
+        document.querySelectorAll("aside .contenedor-links .link").forEach(link => link.style.color = "#000");
+        document.querySelector("aside .contenedor-redes").style.backgroundColor = "#292F36"
+        document.querySelector("header").style.boxShadow = "0 0 3px #000";
+        document.querySelector("footer .contenedor").style.backgroundColor = "#292F36";
+        document.querySelector(".section .contenedor-botones").style.background = "#292F36"
+    }
+
 
 })
 
@@ -62,12 +81,19 @@ function crearHeader(elemento){
     const header = document.createElement("header");
     const h1 = document.createElement("h1");
     const contenedorLinks = document.createElement("div");
+    contenedorLinks.style.display = "flex";
+    contenedorLinks.style.gap = "15px";
+
+    //<a style="cursor: pointer; padding: 5px 10px; background: #000117aa; color: #DADAD9; border-radius: 10px;"> Acerca de </a>
+    contenedorLinks.innerHTML = `
+        <a class="btn-theme" style="background: #000117aa; padding: 5px; border-radius: 50%; cursor: pointer;"> 🌞 <a>
+    `
 
 
     header.style.height = "80px";
     header.style.width = "100%";
     header.style.display = "flex";
-    header.style.justifyContent = "center";
+    header.style.justifyContent = "space-around";
     header.style.alignItems = "center";
     header.style.background = "#0370B7";
 
@@ -75,7 +101,8 @@ function crearHeader(elemento){
     h1.textContent = "Portafolio";
     h1.style.textAlign = "center";
 
-    header.appendChild(h1)
+    header.appendChild(h1);
+    header.appendChild(contenedorLinks);
 
     elemento.appendChild(header);
 }
@@ -109,6 +136,7 @@ function crearTitulo(etiqueta, texto, alineacion, colorFondo, elemento){
     const titulo = document.createElement(etiqueta);
     titulo.textContent = texto;
     titulo.style.textAlign = alineacion;
+    titulo.classList.add("titulo");
     titulo.style.color = "#DADAD9";
     titulo.style.width = "100%"
     titulo.style.height = "80px";
@@ -164,6 +192,7 @@ function contenerAsideRedes(elemento){
     
     contenedorRedes.style.display = "flex";
     contenedorRedes.style.width = "100%";
+    contenedorRedes.classList.add("contenedor-redes")
     contenedorRedes.style.height = "40px";
     contenedorRedes.style.position = "absolute";
     contenedorRedes.style.bottom = "0"
@@ -235,6 +264,7 @@ function agregarElementosProyecto(proyecto){
 
     const contenedorBotones = document.createElement("div");
     contenedorBotones.style.width = "90%";
+    contenedorBotones.classList.add("contenedor-botones")
     contenedorBotones.style.height = "70px";
     contenedorBotones.style.background = "#34495E60";
     contenedorBotones.style.borderBottomRightRadius = "5px";
@@ -288,11 +318,18 @@ function agregarElementosProyecto(proyecto){
 }
 
 function crearFooter(){
-    const footer = document.createElement("div");
+    const footer = document.createElement("footer");
     const div = document.createElement("div");
+    const h2 = document.createElement("h2");
+    const contenedorDatos = document.createElement("div");
+    const contenedorImagen = document.createElement("div");
+    const imagen = document.createElement("img");
+    const contenedorListaDatos = document.createElement("div");
+    const listaDatos = document.createElement("ul");
 
     div.style.width = "100%";
     div.style.height = "350px";
+    div.classList.add("contenedor")
     div.style.background = "#0006";
     div.style.bottom = "-350px";
     div.style.display = "flex";
@@ -301,24 +338,51 @@ function crearFooter(){
     div.style.justifyContent = "flex-start";
     div.style.color = "#DADAD9";
 
-    div.innerHTML = `
-        <h2 style="margin-top: 30px; margin-bottom: 30px;"> Contacto </h2>
-        <div style="display: flex; gap: 30px; justify-content: center; align-items: center;">
-            <div style="width: 300px;"> 
-                <img style="width: 100%; border-radius: 10px;" src="./img/footer/foto.jpg" alt="Foto" />
-            </div>
-            <div>
-                <ul style="display: flex; flex-direction: column; gap: 10px;">
-                    <li> <strong> Desarrollador: </strong> Nelson Muñoz </li>
-                    <li> <strong> Edad: </strong> 21 años </li>
-                    <li> <strong> Cargo o Profesión: </strong> Desarrollador Junior </li>
-                    <li> <strong> Pais: </strong> Colombia </li>
-                    <li> <strong> Ciudad: </strong> Bogota D.C </li>
-                    <li> <strong> Fecha creación: </strong> 1/05/2023 </li>
-                </ul>
-            </div>
-        </div>
-    `
+    h2.style.margin = "30px 0";
+    h2.textContent = "Contacto"
+
+    contenedorDatos.style.display = "flex";
+    contenedorDatos.style.justifyContent = "center";
+    contenedorDatos.style.alignItems = "center";
+    contenedorDatos.style.gap = "30px";
+
+    contenedorImagen.style.width = "300px";
+
+    imagen.src = "./img/footer/foto.jpg";
+    imagen.alt = "Foto";
+    imagen.style.width = "100%";
+    imagen.style.borderRadius = "10px";
+
+    div.appendChild(h2);
+    div.appendChild(contenedorDatos);
+
+    fetch("./assets/data.json")
+        .then(res => res.json())
+        .then(json => {
+            json.datosFooter.forEach(elemento => {
+                const li = document.createElement("li");
+                const strong = document.createElement("strong");
+                const span = document.createElement("span");
+
+                strong.textContent = `${elemento.titulo}:`;
+                span.textContent = elemento.valor;
+                span.style.marginLeft = "3px";
+
+                li.appendChild(strong);
+                li.appendChild(span);
+
+                listaDatos.appendChild(li);
+            })
+        })
+    
+    listaDatos.style.display = "flex";
+    listaDatos.style.flexDirection = "column";
+    listaDatos.style.gap = "15px"
+
+    contenedorDatos.appendChild(contenedorImagen);
+    contenedorImagen.appendChild(imagen);
+    contenedorDatos.appendChild(contenedorListaDatos);
+    contenedorListaDatos.appendChild(listaDatos);
 
     footer.style.width = "100%";
     footer.style.height = "350px";
@@ -329,6 +393,21 @@ function crearFooter(){
     footer.appendChild(div);
 
     return footer;
+}
+
+function mapearDatosFooter(){
+    let lista = "";
+    fetch("./assets/data.json")
+        .then(res => res.json())
+        .then(json => {
+            json.datosFooter.forEach(elemento => {
+                console.log(elemento)
+                lista = `<li> <strong> ${elemento.titulo}: </strong> ${elemento.valor} </li>`
+            })
+        })
+        
+        return lista;
+        
 }
 
 function removerSection(){
